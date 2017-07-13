@@ -1,6 +1,11 @@
 #pragma once
-#include <iostream>
-#include <SFML\Graphics.hpp>
+
+#ifdef OS_LINUX
+	#include <SFML/Graphics.hpp>
+#elif defined OS_WINDOWS
+	#include <SFML\Graphics.hpp>
+#endif
+
 class Game
 {
 public:
@@ -16,4 +21,3 @@ private:
 	void render();
 	void processEvents();
 };
-

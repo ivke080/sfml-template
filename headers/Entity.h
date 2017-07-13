@@ -1,13 +1,17 @@
 #pragma once
-#include <SFML\Graphics.hpp>
 
+#ifdef OS_LINUX
+	#include <SFML/Graphics.hpp>
+#elif defined OS_WINDOWS
+	#include <SFML\Graphics.hpp>
+#endif
 /*
 *	Bazna klasa za sve objekte u igri
 */
 class Entity
 {
 public:
-	
+
 	virtual ~Entity();
 
 	virtual void update(float dt) = 0;
@@ -23,4 +27,3 @@ protected:
 	// Ako je u pitanju animacija, a ne staticna slika, dodati ovde objekat klase animacije
 
 };
-

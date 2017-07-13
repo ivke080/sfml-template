@@ -1,4 +1,10 @@
-#include "headers\Game.h"
+#include "GlupSam.h"
+
+#ifdef OS_LINUX
+	#include "headers/Game.h"
+#elif defined OS_WINDOWS
+	#include "headers\Game.h"
+#endif
 
 sf::Time Game::FPS = sf::seconds(1.0f / 60.0f);
 // Sve ove magicne konstante zameniti promenljivama
@@ -31,7 +37,7 @@ void Game::update(float dt)
 void Game::render()
 {
 	m_window.clear();
-	// ovde crtati 
+	// ovde crtati
 	m_window.display();
 }
 void Game::processEvents()
