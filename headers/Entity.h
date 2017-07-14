@@ -1,6 +1,10 @@
 #pragma once
 
-#include <SFML\Graphics.hpp>
+#ifdef __linux__
+	#include <SFML/Graphics.hpp>
+#elif defined _WIN32
+	#include <SFML\Graphics.hpp>
+#endif
 /*
 *	Bazna klasa za sve objekte u igri
 */

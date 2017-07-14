@@ -2,9 +2,16 @@
 
 #define WIDTH 800
 #define HEIGHT 600
-#include <SFML\Graphics.hpp>
-#include "ResourceManager.h"
-#include <iostream>
+
+#ifdef __linux__
+	#include <SFML/Graphics.hpp>
+	#include <iostream>
+	#include "ResourceManager.h"
+#elif defined _WIN32
+	#include <SFML\Graphics.hpp>
+	#include <iostream>
+	#include "ResourceManager.h"
+#endif
 
 class Game
 {

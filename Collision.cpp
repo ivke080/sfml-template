@@ -1,5 +1,8 @@
-
-#include "Collision.h"
+#ifdef __linux__
+	#include "headers/Collision.h"
+#elif defined _WIN32
+	#include "headers/Collision.h"
+#endif
 
 bool AreColliding(sf::Shape *a, sf::Shape *b)
 {

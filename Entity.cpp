@@ -1,4 +1,8 @@
-#include "Entity.h"
+#ifdef __linux__
+	#include "headers/Entity.h"
+#elif defined _WIN32
+	#include "headers/Entity.h"
+#endif
 
 Entity::Entity()
 {

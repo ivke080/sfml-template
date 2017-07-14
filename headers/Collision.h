@@ -1,8 +1,12 @@
 #pragma once
 
-#include <SFML\Graphics.hpp>
-#include <cmath>
-
+#ifdef __linux__
+	#include <SFML/Graphics.hpp>
+  #include <cmath>
+#elif defined _WIN32
+	#include <SFML\Graphics.hpp>
+  #include <cmath>
+#endif
 
 // Axis Aligned Bounding Box
 struct AABB

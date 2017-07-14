@@ -1,5 +1,13 @@
-#include <SFML/Graphics.hpp>
-#include "Game.h"
+#ifdef __linux__
+	#include <SFML/Graphics.hpp>
+	#include <iostream>
+	#include "headers/Game.h"
+	#include "headers/Collision.h"
+#elif defined _WIN32
+	#include <SFML\Graphics.hpp>
+	#include "headers\Game.h"
+#endif
+
 
 int main(int argc, char *argv[])
 {

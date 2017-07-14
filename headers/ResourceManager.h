@@ -1,5 +1,10 @@
 #pragma once
+
+#ifdef __linux__
+#include <SFML/Graphics.hpp>
+#elif defined _WIN32
 #include <SFML\Graphics.hpp>
+#endif
 #include <iostream>
 #include <map>
 #include <string>
