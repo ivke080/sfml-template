@@ -1,8 +1,6 @@
-#include "GlupSam.h"
-
-#ifdef OS_LINUX
+#ifdef __linux__
 	#include "headers/Entity.h"
-#elif defined OS_WINDOWS
+#elif defined _WIN32
 	#include "headers/Entity.h"
 #endif
 

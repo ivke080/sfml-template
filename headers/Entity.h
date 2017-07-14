@@ -1,8 +1,8 @@
 #pragma once
 
-#ifdef OS_LINUX
+#ifdef __linux__
 	#include <SFML/Graphics.hpp>
-#elif defined OS_WINDOWS
+#elif defined _WIN32
 	#include <SFML\Graphics.hpp>
 #endif
 /*

@@ -1,9 +1,13 @@
 #pragma once
 
-#ifdef OS_LINUX
+#define WIDTH 800
+#define HEIGHT 600
+#ifdef __linux__
 	#include <SFML/Graphics.hpp>
-#elif defined OS_WINDOWS
+	#include <iostream>
+#elif defined _WIN32
 	#include <SFML\Graphics.hpp>
+	#include <iostream>
 #endif
 
 class Game
