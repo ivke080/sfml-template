@@ -1,10 +1,6 @@
 #pragma once
 
-#ifdef __linux__
-	#include <SFML/Graphics.hpp>
-#elif defined _WIN32
-	#include <SFML\Graphics.hpp>
-#endif
+#include <SFML\Graphics.hpp>
 /*
 *	Bazna klasa za sve objekte u igri
 */
@@ -14,8 +10,8 @@ public:
 
 	virtual ~Entity();
 
-	virtual void update(float dt) = 0;
-	virtual void render(sf::RenderWindow window) = 0;
+	virtual void Update(float dt) = 0;
+	virtual void Render(sf::RenderWindow window) = 0;
 
 protected:
 

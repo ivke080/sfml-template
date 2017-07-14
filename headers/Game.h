@@ -2,13 +2,9 @@
 
 #define WIDTH 800
 #define HEIGHT 600
-#ifdef __linux__
-	#include <SFML/Graphics.hpp>
-	#include <iostream>
-#elif defined _WIN32
-	#include <SFML\Graphics.hpp>
-	#include <iostream>
-#endif
+#include <SFML\Graphics.hpp>
+#include "ResourceManager.h"
+#include <iostream>
 
 class Game
 {
@@ -16,12 +12,14 @@ public:
 	Game();
 	~Game();
 
-	void run();
+	void Run();
 private:
 	sf::RenderWindow m_window;
 	static sf::Time FPS;
+	TextureManager m_textures;
+	sf::Sprite m_ship;
 private:
-	void update(float dt);
-	void render();
-	void processEvents();
+	void Update(float dt);
+	void Render();
+	void ProcessEvents();
 };
