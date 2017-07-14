@@ -1,5 +1,5 @@
-exec.exe: main.o Collision.o Entity.o Game.o
-	g++ main.o Collision.o Entity.o Game.o -o exec.exe -lsfml-graphics -lsfml-window -lsfml-system
+exec.exe: main.o Collision.o Entity.o Game.o State.o MenuState.o PlayState.o
+	g++ main.o Collision.o Entity.o Game.o State.o MenuState.o PlayState.o -o exec.exe -lsfml-graphics -lsfml-window -lsfml-system
 
 main.o: main.cpp
 	g++ -c main.cpp
@@ -12,3 +12,9 @@ Entity.o: Entity.cpp
 
 Game.o: Game.cpp
 	g++ -c Game.cpp
+State.o: State.cpp
+	g++ -c State.cpp
+MenuState.o: MenuState.cpp
+	g++ -c MenuState.cpp
+PlayState.o: PlayState.cpp
+	g++ -c PlayState.cpp
